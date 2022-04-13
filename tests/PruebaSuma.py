@@ -10,24 +10,36 @@ class PruebaSuma(unittest.TestCase):
 
     def test_operacionSuma_dosNumerosPositivos_retornaSuma(self):
         # Arrange
-        self.sumando1=10
-        self.sumando2=20
+        self.minuendo=10
+        self.sustraendo=20
         self.resultadoesperado=30
 
         # Do
-        self.resultadoActual=self.suma.operacionSuma(self.sumando1,self.sumando2)
+        self.resultadoActual=self.suma.operacionSuma(self.minuendo, self.sustraendo)
 
         # Assert
         self.assertEqual(self.resultadoesperado,self.resultadoActual)
 
     def test_operacionSuma_dosNumerosNegativos_retornaSuma(self):
         # Arrange
-        self.sumando1=-3
-        self.sumando2=-7
+        self.minuendo=-3
+        self.sustraendo=-7
         self.resultadoesperado=-10
 
         # Do
-        self.resultadoActual=self.suma.operacionSuma(self.sumando1,self.sumando2)
+        self.resultadoActual=self.suma.operacionSuma(self.minuendo, self.sustraendo)
+
+        # Assert
+        self.assertEqual(self.resultadoesperado,self.resultadoActual)
+
+    def test_operacionSuma_dosNumerosPositivos_retornaResta(self):
+        # Arrange
+        self.minuendo=50
+        self.sustraendo=30
+        self.resultadoesperado=20
+
+        # Do
+        self.resultadoActual=self.suma.operacionResta(self.minuendo, self.sustraendo)
 
         # Assert
         self.assertEqual(self.resultadoesperado,self.resultadoActual)
