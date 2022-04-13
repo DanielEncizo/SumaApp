@@ -34,9 +34,9 @@ class PruebaSuma(unittest.TestCase):
 
     def test_operacionSuma_dosNumerosPositivos_retornaResta(self):
         # Arrange
-        self.minuendo=50
-        self.sustraendo=30
-        self.resultadoesperado=20
+        self.minuendo=60
+        self.sustraendo=20
+        self.resultadoesperado=40
 
         # Do
         self.resultadoActual=self.suma.operacionResta(self.minuendo, self.sustraendo)
